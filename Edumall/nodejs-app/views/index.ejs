@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hello EJS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link href="/assets/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Hello EJS</h1>
+    <form method="POST" action="/login">
+        Username: <input type="text" name="username" /><br/> Password: <input type="password" name="password" />
+        <input type="submit" value="Login" />
+    </form>
+    <script type="text/javascript">
+        $.ajax({
+            type: 'POST',
+            url: '/loginjson',
+            data: JSON.stringify({
+                firstname: 'Toan',
+                lastname: 'Le'
+            }),
+            dataType: 'json',
+            contentType: 'application/json'
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+﻿Công ty Outsourcing (Làm dịch vụ):
+- Evolable Asia
+>> Rating: 3.8/5
+>> Công ty nước ngoài Japan- Số lượng nhân viên: Lớn
+>> Skills: Java, PHP, Frontend, Mobile, Testing
+>> Review: Môi trường làm việc tốt, chính sách phúc lợi tốt, salary & benefit tốt, có lớp dạy tiếng Nhật
+>> Vị trí: 09 Dinh Tien Hoang District 1 Ho Chi Minh, Hung Vuong Hai Chau Da Nang
+>> Nguồn tham khảo: 
+*itviec: https://itviec.com/companies/evolable-asia
+*company: http://evolable.asia
+
+- Global CyberSoft
+>> Rating: 3.4/5
+>> Công ty Việt Nam - Số lượng nhân viên: Lớn
+>> Skills: Java, C++, .NET, PHP, Embedded,  Frontend, Mobile, Testing
+>> Review: Sếp tốt, môi trường & văn hóa làm việc tốt, lương thấp, OT nhiều, đánh giá năng lực nhân viên theo task, tốt cho fresher nhưng không nên gắn bó lâu trừ khi bạn thích sự ổn định
+>> Vị trí: 3 Quang Trung Software City District 12 Ho Chi Minh
+>> Nguồn tham khảo:
+*itviec: https://itviec.com/companies/global-cybersoft
+*company: http://www.globalcybersoft.com
+
+Công ty Product (Làm sản phẩm):
+- momo (mobile money)
+>> Rating: 4.3/5
+>> Công ty Việt Nam - Số lượng nhân viên: Lớn
+>> Skills: Java, Mobile(IOS), Testing
+>> Review: Lương khá và phúc lợi tốt, có hỗ trợ ăn trưa, giờ giấc thoải mái, học hỏi nhiều công nghệ, áp lực công việc cao, ít hoạt động training, làm cả sáng t7
+>> Vị trí: 12 Tan Trao District 7 Ho Chi Minh
+>> Nguồn tham khảo:
+*itviec: https://itviec.com/companies/m_service-momo
+*company: https://momo.vn/tuyen-dung/viec-lam-hot/
+
+- Chotot
+>> Rating: 4/5
+>> Công ty nước ngoài Singapore - Số lượng nhân viên: Trung bình (51-150)
+>> Skills: PHP, Python, Mobile(IOS), Testing
+>> Review: Lương khá và môi trường làm việc tốt, văn phòng đẹp, công việc thử thách, lương khởi điểm chưa cao nhưng nếu gắn bó lâu dài thì tốc độ tăng trưởng khá tốt
+>> Vị trí: 2 Ngô Đức Kế District 1 Ho Chi Minh
+>> Nguồn tham khảo:
+*itviec: https://itviec.com/companies/chotot
+*company: http://careers.chotot.com/
