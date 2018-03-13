@@ -1,0 +1,13 @@
+{
+  "name": "NodeExcel_NodeMailer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "ToanLV",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "node-excel-export": "^1.4.3",
+    "nodemailer": "^4.6.2",
+    "nodemailer-smtp-transport": "^2.7.4"
+  }
+}
