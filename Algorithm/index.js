@@ -26,12 +26,30 @@ function CountOddAndEvenOfNum(number) {
 
 console.log('CountOddAndEvenOfNum(1456232):',CountOddAndEvenOfNum(1456232));
 
+// Tìm phần tử lớn thứ 2 trong mảng
+function FindSecondElementOfArray(array) {
+  var first = array[0];
+  var second = array[0];
+  for (var i = 1; i < array.length; i++) {
+    if (array[i] > first) {
+      second = first;
+      first = array[i];
+    }
+
+    if(array[i] > second && array[i] < first) {
+      second = array[i];
+    }
+  }
+  return second;
+};
+
+console.log('FindSecondElementOfArray([1, 1, 1, 3, 2, 5]):', FindSecondElementOfArray([1, 1, 1, 3, 2, 5]));
+
 // Tìm phần tử lớn thứ K trong mảng
 function FindSpecificRankOfArray(rank, array) {
   var pos = 0;
-  var temp = 0;
-  var copyArr = array.slice();
-  for (var i = 0; i < array.length; i++) {
+  var mark = 0;
+  for (var i = 0; i < array.length - 1; i++) {
     for(var j = i + 1; j < array.length; j++) {
       if(array[i] < array[j]) {
         var temp = array[i];
@@ -39,20 +57,19 @@ function FindSpecificRankOfArray(rank, array) {
         array[j] = temp; 
       }
     }
-    
-    if(array[i] < array[temp]) {
+    if(array[i] < array[mark]) {
       rank--;
-      if(rank == 1) {
+      if(rank === 1) {
         pos = i;
         break;
       }
-      temp = i;
+      mark = i;
     }
   }
-  return copyArr[pos];
+  return array[pos];
 };
 
-console.log('FindSpecificRankOfArray(5, [1, 1, 2, 3, 4]):', FindSpecificRankOfArray(5, [1, 1, 2, 3, 4]));
+console.log('FindSpecificRankOfArray(3, [2, 3, 6, 6, 5]):', FindSpecificRankOfArray(3, [2, 3, 6, 6, 5]));
 
 // Tìm ước chung lớn nhất của 2 số
 function GreatestCommonDivisor(numA, numB) {
