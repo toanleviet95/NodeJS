@@ -71,6 +71,32 @@ function FindSpecificRankOfArray(rank, array) {
 
 console.log('FindSpecificRankOfArray(3, [2, 3, 6, 6, 5]):', FindSpecificRankOfArray(3, [2, 3, 6, 6, 5]));
 
+// Tìm phần tử nhỏ thứ K trong mảng
+function FindRankSmallestElementOfArray(rank, array) {
+  var pos = 0;
+  var mark = 0;
+  for (var i = 0; i < array.length - 1; i++) {
+    for (var j = i + 1; j < array.length; j++) {
+      if (array[j] < array[i]) {
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+      }
+    }
+    if (array[mark] < array[i]) {
+      rank--;
+      if (rank === 1) {
+        pos = i;
+        break;
+      }
+      mark = i;
+    }
+  }
+  return array[pos];
+}
+
+console.log('FindRankSmallestElementOfArray(3, [2, 3, 6, 6, 5]):', FindRankSmallestElementOfArray(3, [2, 3, 6, 6, 5]));
+
 // Tìm ước chung lớn nhất của 2 số
 function GreatestCommonDivisor(numA, numB) {
   if(numB === 0) {
@@ -192,12 +218,12 @@ console.log('ListUpperArrays([1, 2, 3, 4, 7, 6]):', ListUpperArrays([1, 2, 3, 4,
 function FindLongestUpperArray(array) {
   var u = 0;
   var v= 0;
-  var lengthMax = v - u + 1;
+  var lengthMax = v - u;
   var result = [];
   for (var i = 0; i < array.length - 1; i++) {
     for (var j = i + 1; j < array.length; j++) {
-      if(IsUpperArray(array, i, j) && j - i + 1 > lengthMax) {
-        lengthMax = j - i + 1;
+      if(IsUpperArray(array, i, j) && j - i > lengthMax) {
+        lengthMax = j - i;
         u = i;
         v = j;
       }
@@ -298,3 +324,51 @@ function FactorOfNumber(number) {
 }
 
 console.log('FactorOfNumber(3):', FactorOfNumber(3));
+
+// Kiểm tra cặp kí tự '(' và ')'
+function checkPairOfChar(input) {
+  var result = 0;
+
+  if (input[0] === ')' && input[input.length - 1] === '(') {
+    return false;
+  }
+
+  for(var i = 0; i < input.length; i++) {
+    if (input[i] === '(') {
+      result = result - 1;
+    }
+    if (input[i] === ')') {
+      result = result + 1;
+    }
+  }
+
+  return result === 0 ? true : false;
+}
+
+console.log('checkPairOfChar("()()()()(())"):', checkPairOfChar("()()()()(())"));
+
+// Tìm ra mảng con liên tiếp của một mảng có số phần tử K sao cho tổng các phần tử là lớn nhất
+function UpperArrayHavingSumMax(array, k) {
+  var listArrays = [];
+  var result = [];
+  var max = 0; 
+  for (var i = 0; i < array.length - 1; i++) {
+    for (var j = i + 1; j < array.length; j++) {
+      if (IsUpperArray(array, i, j) && (j - i === k)) {
+        var temp = [];
+        var sum = 0;
+        for (var t = i; t < j; t++) {
+          temp.push(array[t]);
+          sum += array[t];
+        }
+        if (sum > max) {
+          max = sum;
+          result = temp.slice(0);
+        }
+      }
+    }
+  }
+  return result;
+}
+
+console.log('UpperArrayHavingSumMax([1, -5, 4, 3, 6, 8, 2, 4], 3):', UpperArrayHavingSumMax([1, -5, 4, 3, 6, 8, 2, 4], 3));
